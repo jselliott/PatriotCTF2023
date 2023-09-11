@@ -16,7 +16,7 @@ Boy these captcha's are getting out of hand! First it was some numbers and lette
 
 Using the script below, we can use OCR to grab the relevant numbers from each file.
 
-```
+```python
 import pytesseract
 from PIL import Image
 import zipfile
@@ -43,7 +43,7 @@ for filename, numbers in numbers_by_file.items():
 
 We can then use these values to compute N and decrypt the ciphertext.
 
-```
+```python
 from Crypto.Util.number import long_to_bytes
 
 def egcd(a, b):
